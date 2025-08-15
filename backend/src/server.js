@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 app.use(cors({
     credentials: true,
-    origin: ['http://localhost:3000'],
+    origin: ['`${process.env.REACT_APP_API_URL}`'],
 }));
 app.use('/api/foods',foodRouter);
 app.use('/api/users',userRouter);
